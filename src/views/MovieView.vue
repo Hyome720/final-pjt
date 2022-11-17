@@ -17,9 +17,9 @@ export default {
     MovieList,
   },
   computed: {
-    isLogin() {
-      return this.$store.getters.isLogin
-    }
+    // isLogin() {
+    //   return this.$store.getters.isLogin
+    // }
   },
   methods: {
     // getMovies() {
@@ -32,6 +32,7 @@ export default {
     // }
     getMovies() {
       this.$store.dispatch('getMovies')
+      console.log(process.env.VUE_APP_TMDB)
     }
   },
   created() {
